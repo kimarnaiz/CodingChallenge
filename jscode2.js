@@ -11,7 +11,7 @@ function calculateValidationNumber(input){
 	console.log(sum);
 	
 	//return first digit
-	let result2 = Array.from(input.toString());
+	//let result2 = Array.from(input.toString());
 	
 }
 
