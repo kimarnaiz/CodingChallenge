@@ -53,13 +53,13 @@ const people = [
     
 function listByGender(gender) {
 	let nameByGender = [];
-		for(let i in people){
-			if(gender === 'M' && people[i].gender === 'M'){
-                nameByGender.push(people[i].name);
-            }
-            if(gender === 'F' && people[i].gender === 'F'){
-                nameByGender.push(people[i].name);
-            }
+	for(let i in people){
+		if(gender === 'M' && people[i].gender === 'M'){
+               		nameByGender.push(people[i].name);
+            	}
+            	if(gender === 'F' && people[i].gender === 'F'){
+                	nameByGender.push(people[i].name);
+            	}
         }
         console.log(nameByGender);
 }
@@ -70,30 +70,31 @@ function listByGender(gender) {
     
 function groupByDepartment(){
 	var groupedDept = []; //unique values
-    var deptList = []; //store unique departments
-    var result = []; //store grouped names by department
+    	var deptList = []; //store unique departments
+    	var result = []; //store grouped names by department
     
-    for(let j = 0; j < people.length; j++){
+    	for(let j = 0; j < people.length; j++){
 		if(!groupedDept[people[j].department]){
 			deptList.push(people[j].department);
-            groupedDept[people[j].department] = deptList;
-        }
-    }
+            		groupedDept[people[j].department] = deptList;
+        	}
+    	}
 		
-    for (let k in deptList){
+    	for (let k in deptList){
 		var nameList = []; //store names
 		for (let l in people){
 			if(people[l].department === deptList[k]){
 				nameList.push(people[l].name);
-            } 	
-        }
+            		} 	
+        	}
             
 		//store results in json array
-        result.push({
+        	result.push({
 			"Department": deptList[k],
-            "Name": nameList
-        });
-    }
+            		"Name": nameList
+        	});
+    	}
 	console.log(result);
 }
+
 groupByDepartment();
