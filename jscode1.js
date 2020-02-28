@@ -98,3 +98,11 @@ function groupByDepartment(){
 }
 
 groupByDepartment();
+
+/* Output:
+[ { Department: 'BP', Name: [ 'Arisa' ] },
+  { Department: 'IT', Name: [ 'Ham', 'Alice' ] },
+  { Department: 'DA', Name: [ 'Anna' ] },
+  { Department: 'Sales',
+    Name: [ 'Larry', 'Ria', 'JD', 'Thor', 'Karl', 'Rachel' ] } ]
+*/
